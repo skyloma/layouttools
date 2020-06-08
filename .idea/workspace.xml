@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="64e0323f-f274-4685-b7e1-2e26056ebf61" name="Default Changelist" comment="init">
+      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/init.patch" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/layouttools.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/layouttools/META-INF/plugin.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/layouttools/com/lomasky/mvvmtools/MvvMAction.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/META-INF/plugin.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/lomasky/mvvmtools/MvvMAction.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IgnoredFileRootStore">
+    <option name="generatedRoots">
+      <set>
+        <option value="D:\test\WebrtcDemo\layouttools\.idea" />
+      </set>
+    </option>
+  </component>
+  <component name="LogFilters">
+    <option name="FILTER_ERRORS" value="false" />
+    <option name="FILTER_WARNINGS" value="false" />
+    <option name="FILTER_INFO" value="true" />
+    <option name="FILTER_DEBUG" value="true" />
+    <option name="CUSTOM_FILTER" />
+  </component>
+  <component name="ProjectId" id="1csaAtNdenCJmIDCbTyaiv4OivT" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
+  </component>
+  <component name="RunManager">
+    <configuration name="Plugin" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType">
+      <module name="layouttools" />
+      <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -ea" />
+      <option name="PROGRAM_PARAMETERS" />
+      <predefined_log_file enabled="true" id="idea.log" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType">
+      <module name="layouttools" />
+      <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -ea" />
+      <option name="PROGRAM_PARAMETERS" />
+      <predefined_log_file enabled="true" id="idea.log" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="64e0323f-f274-4685-b7e1-2e26056ebf61" name="Default Changelist" comment="" />
+      <created>1591319614946</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1591319614946</updated>
+      <workItem from="1591319618986" duration="17827000" />
+      <workItem from="1591582312080" duration="633000" />
+      <workItem from="1591583894378" duration="1119000" />
+    </task>
+    <task id="LOCAL-00001" summary="init">
+      <created>1591352654070</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1591352654070</updated>
+    </task>
+    <task id="LOCAL-00002" summary="init">
+      <created>1591352693445</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1591352693445</updated>
+    </task>
+    <task id="LOCAL-00003" summary="init">
+      <created>1591352861638</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1591352861638</updated>
+    </task>
+    <task id="LOCAL-00004" summary="init">
+      <created>1591583994510</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1591583994510</updated>
+    </task>
+    <task id="LOCAL-00005" summary="init">
+      <created>1591584221826</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1591584221826</updated>
+    </task>
+    <task id="LOCAL-00006" summary="init">
+      <created>1591584365297</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1591584365297</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <ignored-roots>
+      <path value="$PROJECT_DIR$" />
+    </ignored-roots>
+    <MESSAGE value="init" />
+    <option name="LAST_COMMIT_MESSAGE" value="init" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="572" y="119" key="CommitChangelistDialog2" timestamp="1591585041586">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="572" y="119" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1591585041586" />
+    <state width="938" height="525" key="GridCell.Tab.0.bottom" timestamp="1591352834950">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="938" height="525" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1591352834950" />
+    <state width="938" height="525" key="GridCell.Tab.0.center" timestamp="1591352834950">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="938" height="525" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1591352834950" />
+    <state width="938" height="525" key="GridCell.Tab.0.left" timestamp="1591352834950">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="938" height="525" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1591352834950" />
+    <state width="938" height="525" key="GridCell.Tab.0.right" timestamp="1591352834950">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="938" height="525" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1591352834950" />
+    <state width="938" height="525" key="GridCell.Tab.1.bottom" timestamp="1591352834950">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="938" height="525" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1591352834950" />
+    <state width="938" height="525" key="GridCell.Tab.1.center" timestamp="1591352834950">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="938" height="525" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1591352834950" />
+    <state width="938" height="525" key="GridCell.Tab.1.left" timestamp="1591352834950">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="938" height="525" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1591352834950" />
+    <state width="938" height="525" key="GridCell.Tab.1.right" timestamp="1591352834950">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="938" height="525" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1591352834950" />
+    <state x="463" y="165" key="SettingsEditor" timestamp="1591584956345">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="463" y="165" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1591584956345" />
+    <state x="552" y="256" key="Vcs.Push.Dialog.v2" timestamp="1591585046844">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="552" y="256" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1591585046844" />
+    <state x="652" y="347" key="com.intellij.ide.util.TipDialog" timestamp="1591582312288">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="652" y="347" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1591582312288" />
+  </component>
+</project>
