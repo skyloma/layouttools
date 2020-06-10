@@ -9,18 +9,19 @@ import com.intellij.openapi.editor.Editor;
 import com.intellij.openapi.project.Project;
 import com.intellij.openapi.ui.Messages;
 import com.intellij.openapi.vfs.VirtualFile;
-import com.intellij.psi.*;
+import com.intellij.psi.PsiClass;
+import com.intellij.psi.PsiElementFactory;
+import com.intellij.psi.PsiField;
+import com.intellij.psi.PsiFile;
+import com.intellij.psi.codeStyle.JavaCodeStyleManager;
 import com.intellij.psi.impl.source.PsiJavaFileImpl;
-import com.intellij.psi.javadoc.PsiDocComment;
-import com.intellij.psi.javadoc.PsiDocTag;
-import com.intellij.psi.javadoc.PsiDocTagValue;
 import com.intellij.psi.util.PsiUtilBase;
+
 import java.io.File;
 import java.io.FileOutputStream;
-import java.io.FileWriter;
 import java.io.IOException;
 
-public class MvvMAction extends BaseGenerateAction
+public class MvvMAction_recyclerView extends BaseGenerateAction
 {
     protected PsiClass mClass;
     private PsiElementFactory mFactory;
@@ -29,12 +30,12 @@ public class MvvMAction extends BaseGenerateAction
     private String packageName;
     private String modelPath;
 
-    public MvvMAction()
+    public MvvMAction_recyclerView()
     {
         super(null);
     }
 
-    public MvvMAction(CodeInsightActionHandler handler)
+    public MvvMAction_recyclerView(CodeInsightActionHandler handler)
     {
         super(handler);
     }
@@ -67,10 +68,10 @@ public class MvvMAction extends BaseGenerateAction
 
         if (this.modelPath != null) {
 
-            int yn = Messages.showYesNoDialog(this.project, "是否使用数据绑定", "生成表单视图", Messages.getQuestionIcon());
+            int yn = Messages.showYesNoDialog(this.project, "是否使用数据绑定", "生成数据视图", Messages.getQuestionIcon());
             if (yn ==0)   createFile(this.project );
 
-            else if (yn==1) createFileBinding(this.project );
+            else if(yn ==1 ) createFileBinding(this.project );
         }
     }
 
@@ -78,16 +79,16 @@ public class MvvMAction extends BaseGenerateAction
     {
 
 
-
-        if (project != null){
-
-            ProjectView projectView=   ProjectView.getInstance(project);
-            projectView.changeView();
-            projectView.refresh();
-
-        }
         Messages.showMessageDialog(project, "布局文件生成ing...请稍等！", "好消息",
                 Messages.getInformationIcon());
+        if (project != null){
+
+
+
+
+
+            ProjectView.getInstance(project).refresh();
+        }
 
     }
 
@@ -149,17 +150,16 @@ public class MvvMAction extends BaseGenerateAction
 
 
         sb.append("<LinearLayout xmlns:android=\"http://schemas.android.com/apk/res/android\"\n" +
-                "            xmlns:app=\"http://schemas.android.com/apk/res-auto\"\n" +
-                "            xmlns:tools=\"http://schemas.android.com/tools\"\n" +
-                "            android:layout_width=\"match_parent\"\n" +
-                "            android:layout_height=\"wrap_content\"\n" +
-                "            android:orientation=\"vertical\">").append("\n");
-//        sb.append("<include layout=\"@layout/toolbar\"/>").append("\n");
+                "        xmlns:app=\"http://schemas.android.com/apk/res-auto\"\n" +
+                "        xmlns:tools=\"http://schemas.android.com/tools\"\n" +
+                "        android:orientation=\"vertical\"\n" +
+                "        android:layout_width=\"match_parent\"\n" +
+                "        android:layout_height=\"wrap_content\">").append("\n");
         sb.append("    <TableLayout\n" +
                 "            android:stretchColumns=\"1\"\n" +
                 "             android:layout_marginHorizontal=\"16dp\"\n" +
                 "            android:divider=\"@drawable/list_divider\"\n" +
-                "            android:showDividers=\"middle|end\"\n" +
+                "            android:showDividers=\"middle\"\n" +
                 "            android:layout_width=\"match_parent\"\n" +
                 "            android:layout_height=\"wrap_content\"\n" +
                 "            >").append("\n");
@@ -175,7 +175,7 @@ public class MvvMAction extends BaseGenerateAction
         sb.append("</layout>").append("\n");
 
 
-        File file = new File(path, new StringBuilder().append(this.mClass.getName().toLowerCase()).append(".xml").toString());
+        File file = new File(path, new StringBuilder().append(this.mClass.getName().toLowerCase()).append("_item.xml").toString());
         try
         {
             if (file.exists()) {
@@ -218,25 +218,11 @@ public class MvvMAction extends BaseGenerateAction
             sb.append("<TextView\n" +
                     "            android:layout_width=\"wrap_content\"\n" +
                     "            android:layout_height=\"wrap_content\"\n" +
-                    "            android:text=\"@string/tx_"+field.getName()+"\" />").append("\n");
-
-
-            sb.append("<EditText\n" +
-
-                    "            android:id=\"@+id/editText_"+field.getName()+"\"\n" +
-                    "            style=\"@style/form_edit\"\n" +
-                    "            android:inputType=\"text\"\n" +
                     "            tools:text=\""+example+"\"\n" +
-                    "            android:hint=\"@string/hint\"\n" +
                     "            android:text=\"@{data."+field.getName()+"}\" />").append("\n");
 
-            sb.append("<ImageView\n" +
-                    "                    android:layout_width=\"wrap_content\"\n" +
-                    "                    android:layout_height=\"wrap_content\"\n" +
-                    "                    android:background=\"?actionBarItemBackground\"\n" +
-                    "                    android:clickable=\"true\"\n" +
-                    "                    android:padding=\"16dp\"\n" +
-                    "                    android:src=\"@drawable/ic_clear_16\" />").append("\n");
+
+
             sb.append("</TableRow>").append("\n");
         }
 
@@ -257,7 +243,6 @@ public class MvvMAction extends BaseGenerateAction
 
         for (PsiField field : fFields){
 
-
             String text = field.getText();
             String example = "";
 
@@ -274,27 +259,18 @@ public class MvvMAction extends BaseGenerateAction
 
             sb.append("<TableRow>").append("\n");
             sb.append("<TextView\n" +
+                    "            android:id=\"@+id/textView"+field.getName()+"\"\n" +
                     "            android:layout_width=\"wrap_content\"\n" +
                     "            android:layout_height=\"wrap_content\"\n" +
-                    "            android:text=\"@string/tx_"+field.getName()+"\" />").append("\n");
+                    "            tools:text=\""+example+"\" />").append("\n");
 
 
-            sb.append("<EditText\n" +
-                    "            android:id=\"@+id/editText_"+field.getName()+"\"\n" +
-                    "            style=\"@style/form_edit\"\n" +
-                    "            tools:text=\""+example+"\"\n" +
-                    "            android:inputType=\"text\"\n" +
-                    "            android:hint=\"@string/hint\" />").append("\n");
-            sb.append("<ImageView\n" +
-                    "                    android:layout_width=\"wrap_content\"\n" +
-                    "                    android:layout_height=\"wrap_content\"\n" +
-                    "                    android:background=\"?actionBarItemBackground\"\n" +
-                    "                    android:clickable=\"true\"\n" +
-                    "                    android:padding=\"16dp\"\n" +
-                    "                    android:src=\"@drawable/ic_clear_16\" />").append("\n");
-            sb.append("</TableRow>").append("\n");
+             sb.append("</TableRow>").append("\n");
 
         }
+
+
+
 
 
     }
@@ -347,19 +323,18 @@ public class MvvMAction extends BaseGenerateAction
         sb.append("\n");
         sb.append("\n");
         sb.append("<LinearLayout xmlns:android=\"http://schemas.android.com/apk/res/android\"\n" +
-                "            xmlns:app=\"http://schemas.android.com/apk/res-auto\"\n" +
-                "            xmlns:tools=\"http://schemas.android.com/tools\"\n" +
-                "            android:layout_width=\"match_parent\"\n" +
-                "            android:layout_height=\"wrap_content\"\n" +
-                "            android:orientation=\"vertical\">").append("\n");
+                "        xmlns:app=\"http://schemas.android.com/apk/res-auto\"\n" +
+                "        xmlns:tools=\"http://schemas.android.com/tools\"\n" +
+                "        android:orientation=\"vertical\"\n" +
+                "        android:layout_width=\"match_parent\"\n" +
+                "        android:layout_height=\"wrap_content\">").append("\n");
 
-//        sb.append("<include layout=\"@layout/toolbar\"/>").append("\n");
 
         sb.append("    <TableLayout\n" +
                 "            android:stretchColumns=\"1\"\n" +
                 "             android:layout_marginHorizontal=\"16dp\"\n" +
                 "            android:divider=\"@drawable/list_divider\"\n" +
-                "            android:showDividers=\"middle|end\"\n" +
+                "            android:showDividers=\"middle\"\n" +
                 "            android:layout_width=\"match_parent\"\n" +
                 "            android:layout_height=\"wrap_content\"\n" +
                 "            >").append("\n");
@@ -380,7 +355,7 @@ public class MvvMAction extends BaseGenerateAction
 
 
 
-        File file = new File(path, new StringBuilder().append(this.mClass.getName().toLowerCase()).append(".xml").toString());
+        File file = new File(path, new StringBuilder().append(this.mClass.getName().toLowerCase()).append("item.xml").toString());
         try
         {
             if (file.exists()) {

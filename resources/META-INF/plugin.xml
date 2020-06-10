@@ -27,13 +27,23 @@
 
 
   <actions>
-    <action id="MvvMAction" class="com.lomasky.mvvmtools.MvvMAction" text="javabean表单生成工具" >
+    <action id="MvvMAction" class="com.lomasky.mvvmtools.MvvMAction" text="javabean->Form表单生成工具" >
 
       <!--<add-to-group group-id="GenerateGroup" anchor="first"/>-->
       <add-to-group group-id="GenerateGroup" anchor="first"/>
       <keyboard-shortcut keymap="$default" first-keystroke="alt x"/>
     </action>
+
+    <action id="MvvMAction_recyclerView" class="com.lomasky.mvvmtools.MvvMAction_recyclerView" text="javabean->adapter生成工具" >
+
+      <!--<add-to-group group-id="GenerateGroup" anchor="first"/>-->
+      <add-to-group group-id="GenerateGroup" anchor="first"/>
+      <keyboard-shortcut keymap="$default" first-keystroke="alt d"/>
+    </action>
+
   </actions>
+
+
 
 
 </idea-plugin>
